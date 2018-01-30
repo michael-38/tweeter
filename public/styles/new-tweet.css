@@ -8,6 +8,7 @@ main form textarea {
 }
 
 .new-tweet .counter { /*clear float?*/
+  font-size: 15px;
   float: right;
 }
 

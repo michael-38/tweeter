@@ -38,8 +38,8 @@
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span>
+        <input class="submit" type="submit" value="Tweet">
+        <span class="counter">Character(s) remaining: 140</span>
       </form>
     </section>
 
@@ -53,7 +53,7 @@
         </header>
         <p id="tweet-text">Tweeted Text Here</p>
         <footer>
-          <span>Posted 2 days ago</span>
+          <span id="created-at">Posted 2 days ago</span>
           <div id="icons">
             <img id="flag" src="/images/flag.png">
             <img id="retweet" src="/images/retweet.png">
