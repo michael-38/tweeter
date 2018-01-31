@@ -1,6 +1,5 @@
 /*
  * Client-side JS logic goes here
- * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
@@ -19,9 +18,6 @@
   };
 
   loadTweets(); //load existing tweets from db
-
-
-
 
 
 $(document).on("mouseover", "article.tweet", function() { //apply event handler to entire document, since some tweets are generated after the page loads
