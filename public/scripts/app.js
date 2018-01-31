@@ -10,6 +10,7 @@
 
   function loadTweets () {
     console.log("performing ajax call...");
+    $('#all-tweets').empty();
     $.ajax({  //make Ajax GET request to /tweets and receive the array of tweets as JSON
       url: '/tweets',
       method: 'GET',
@@ -17,7 +18,9 @@
     });
   };
 
-  loadTweets(); //load tweets from db
+  loadTweets(); //load existing tweets from db
+
+
 
 
 
@@ -55,7 +58,6 @@ $(".compose").on('click', function() {
   $(".new-tweet").slideToggle();
   $(".new-tweet textarea").focus();
 });
-
 
 
 });
