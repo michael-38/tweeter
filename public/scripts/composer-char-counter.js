@@ -6,7 +6,7 @@ $(document).ready(function() {
         var charLeft = 140 - charCount;
         console.log(charLeft); //this totals the correct number of characters within textarea
         // $(".new-tweet .counter").text("Character(s) remaining: " + charLeft);
-        $(this).find(".counter").text("Character(s) remaining: " + charLeft);
+        $(this).siblings(".counter").text("Character(s) remaining: " + charLeft);
 
         if (charLeft < 0) {
           $(".new-tweet .counter").addClass("overlimit");

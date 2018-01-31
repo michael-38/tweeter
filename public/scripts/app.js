@@ -5,6 +5,7 @@
  */
 
 
+ 
  $(document).ready(function() {
 
   function loadTweets () {
@@ -58,11 +59,6 @@ $(".compose").on('click', function() {
 
 
 });
-
-
-// function clearTextArea() {
-//   $("textarea").empty();
-// }
 
 
 function escape(str) {

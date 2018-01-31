@@ -7,7 +7,7 @@ main form textarea {
   width: 100%;
 }
 
-.new-tweet .counter { /*clear float?*/
+.new-tweet .counter {
   font-size: 15px;
   float: right;
 }

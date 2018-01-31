@@ -1,10 +1,9 @@
 article.tweet {
   border: 1px solid lightgrey;
   border-radius: 5px;
-  margin: 2em;
+  margin: 20px 2em 20px 2em;
   overflow:hidden;
 }
-
 
 
 article.tweet header {
@@ -30,14 +29,14 @@ article.tweet #handle {
 }
 
 
-article.tweet .profile-pic {
+article.tweet .profile_pic {
   width: 60px;
   height: 60px;
   margin: 10px 8px 10px 8px;
   border-radius: 5px;
 }
 
-article.tweet #tweet-text {
+article.tweet #tweet_text {
   padding: 10px;
 }
 
