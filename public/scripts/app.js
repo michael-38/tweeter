@@ -33,19 +33,6 @@ $(document).on("mouseover", "article.tweet", function() { //apply event handler 
   });
 
 
-  // $(document).on("mouseover", "article.tweet", function() { //apply event handler to entire document, since some tweets are generated after the page
-  //   $("article.tweet").css("border", "1px solid black");
-  //   $("article.tweet #icons").css("display", "block");
-  //   $("article.tweet #fullname").css("color", "#244751");
-  // });
-
-  // $(document).on("mouseleave", "article.tweet", function() {
-  //   $("article.tweet").css("border", "1px solid lightgrey");
-  //   $("article.tweet #icons").css("display", "none");
-  //   $("article.tweet #fullname").css("color", "#377182");
-  // });
-
-
   $("form").on('submit', function(event) {
     event.preventDefault();
     if ($("textarea").val().length === 0) {
@@ -59,20 +46,30 @@ $(document).on("mouseover", "article.tweet", function() { //apply event handler 
         data: $(this).serialize(),
         success: loadTweets
       })
+    $("textarea").val("");
     }
   });
 
-
-
-
-
-
+$(".compose").on('click', function() {
+  $(".new-tweet").slideToggle();
+  $(".new-tweet textarea").focus();
+});
 
 
 
 });
 
 
+// function clearTextArea() {
+//   $("textarea").empty();
+// }
+
+
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
  function createTweetElement(obj) {
   let profile_pic = obj["user"].avatars.small;
@@ -83,26 +80,25 @@ $(document).on("mouseover", "article.tweet", function() { //apply event handler 
 
   $tweet = (`
     <article class="tweet">
-    <header>
-    <img class="profile_pic" src="${profile_pic}">
-    <span id="fullname"> ${fullname} </span>
-    <span id="handle">${handle}</span>
-    </header>
-    <p id="tweet_text">${tweet_text}</p>
-    <footer>
-    <span id="created_at">${created_at}</span>
-    <div id="icons">
-    <img id="flag" src="/images/flag.png">
-    <img id="retweet" src="/images/retweet.png">
-    <img id="like" src="/images/like.png">
-    </div>
-    </footer>
-    </article>
-    `);
+      <header>
+        <img class="profile_pic" src="${escape(profile_pic)}">
+        <span id="fullname"> ${escape(fullname)} </span>
+        <span id="handle">${escape(handle)}</span>
+      </header>
+      <p id="tweet_text">${escape(tweet_text)}</p>
+      <footer>
+        <span id="created_at">${escape(created_at)}</span>
+        <div id="icons">
+          <img id="flag" src="/images/flag.png">
+          <img id="retweet" src="/images/retweet.png">
+          <img id="like" src="/images/like.png">
+        </div>
+      </footer>
+    </article>`
+  );
 
-  return $tweet;
+  return $tweet; //note: this only returns html text, and not added to the DOM (use append/prepend to add to DOM so the tweet renders)
 }
-
 
 function renderTweets(data) {
   for (tweet of data) {
