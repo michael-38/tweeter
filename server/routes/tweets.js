@@ -12,6 +12,8 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
+        // res.json({message: "hello"})
+        console.log(tweets);
         res.json(tweets);
       }
     });
@@ -29,14 +31,16 @@ module.exports = function(DataHelpers) {
       content: {
         text: req.body.text
       },
-      created_at: Date.now()
+      created_at: Date().toString()
     };
 
-    DataHelpers.saveTweet(tweet, (err) => {
+    DataHelpers.saveTweet(tweet, (err, results) => {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
+        console.log(results)
         res.status(201).send();
+        
       }
     });
   });

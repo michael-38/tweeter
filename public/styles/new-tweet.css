@@ -10,16 +10,29 @@ main form textarea {
 .new-tweet .counter {
   font-size: 15px;
   float: right;
+  margin-top: 5px;
 }
 
 .new-tweet {
-  background-color: #eee;
+  color: #1d9eef;
+  background-color: #f9f9f9;
   border: 1px solid grey;
   border-radius: 5px;
   padding: 10px 20px 20px 20px;
-  margin: 2em;
+  margin: 1em 2em 1em 2em;
 }
 
 .new-tweet .counter.overlimit {
   color: red;
+}
+
+
+#all-tweets {
+  padding: 10px 0px 10px 0px;
+}
+
+
+input.submit {
+  color: #1d9eef;
+  margin-top: 5px;
 }
