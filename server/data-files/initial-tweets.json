@@ -12,7 +12,7 @@
     "content": {
       "text": "I love @joanne :)"
     },
-    "created_at": 1461116232227
+    "created_at": "Thu Feb 01 2018 21: 36: 12 GMT+0000 (UTC)" 
   },
   {
     "user": {
@@ -26,21 +26,6 @@
     "content": {
       "text": "I have the best boyfriend in the world!"
     },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Ross",
-      "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-      },
-      "handle": "@ross11"
-    },
-    "content": {
-      "text": "Hello from New York"
-    },
-    "created_at": 1461113796368
+    "created_at": "Thu Feb 01 2018 21: 35: 57 GMT+0000 (UTC)"
   }
 ]
