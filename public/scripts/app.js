@@ -20,13 +20,13 @@
 
 
 $(document).on("mouseover", "article.tweet", function() { //apply event handler to entire document, since some tweets are generated after the page loads
-    $(this).css("border", "1px solid black"); //using $(this) to apply hover state change to one article.tweet instead of all tweets
+    $(this).css("border", "1.5px solid darkgrey"); //using $(this) to apply hover state change to one article.tweet instead of all tweets
     $(this).find("#icons").css("display", "block");
     $(this).find("#fullname").css("color", "#244751");
   });
 
   $(document).on("mouseleave", "article.tweet", function() {
-    $(this).css("border", "1px solid lightgrey");
+    $(this).css("border", "1.5px solid lightgrey");
     $(this).find("#icons").css("display", "none");
     $(this).find("fullname").css("color", "#377182");
   });
