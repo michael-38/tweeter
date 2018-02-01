@@ -5,9 +5,9 @@ Tweeter is a simple, single-page Twitter clone by leveraging HTML, CSS, JS, jQue
 
 ## Final Product
 
-!["Home Page"](#)
-!["Composing a Tweet"](#)
-!["Submitted Tweet"](#)
+!["Home Page"](https://github.com/michael-38/tweeter/blob/master/docs/home_page.png)
+!["Composing a Tweet"](https://github.com/michael-38/tweeter/blob/master/docs/compose_tweet.png)
+!["Submitted Tweet"](https://github.com/michael-38/tweeter/blob/master/docs/submit_tweet.png)
 
 
 ## Dependencies
