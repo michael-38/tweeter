@@ -6,7 +6,7 @@ const express       = require('express');
 const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
-  
+
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, results) => { //getTweets is a function that takes a callback function (refer to this function in the data-helpers.js file). The callback will be an anonymous function that has the err, results arguments. When a GET request is made to "/", the getTweets function will run (from the data-helpers.js file). Depending on what we get once we run getTweets, the callback function below will execute with the err, results arguments.
     if (err) {
@@ -22,7 +22,8 @@ tweetsRoutes.post("/", function(req, res) {
     res.status(400).json({ error: 'invalid request: no data in POST body'});
     return;
   }
-  
+
+
   const user = req.body.user ? req.body.user : userHelper.generateRandomUser();//if req.body.user exists (i.e. a user is logged in), use that as the username, else generateRandomUser().
   const tweet = {
     user: user,
@@ -36,7 +37,6 @@ tweetsRoutes.post("/", function(req, res) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
-      console.log('saved to db!', results.insertedId)
       res.status(201).send();        
     }
   });
