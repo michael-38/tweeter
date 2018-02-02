@@ -6,8 +6,17 @@ const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
+const sassMiddleware = require('node-sass-middleware')
+
+app.use(sassMiddleware({
+  src: './stylesheets',
+  dest: './public/css',
+  prefix: '/css'
+}))
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
 app.use(express.static("public"));
 
 // Originally, we were using an in-memory database of tweets. It's a basic object with an array in it.
