@@ -29,13 +29,14 @@ tweetsRoutes.post("/", function(req, res) {
     content: {
       text: req.body.text
     },
-    created_at: Date().toString()
+    created_at: Date.now()
   };
   
   DataHelpers.saveTweet(tweet, (err, results) => { //saveTweet is a function that takes a "newTweet" and a callback function as its arguments (refer to this function in the data-helpers.js file). When a POST request is made to "/", the getTweets function will run (from the data-helpers.js file). Initially, const "tweet" (from here) is passed to saveTweet as the "newTweet" argument and will attempt to be inserted to the db.collection("tweets"). Depending on what we get (err or results) once we run getTweets, the callback function below will execute with the err, results arguments.
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
+      console.log('saved to db!', results.insertedId)
       res.status(201).send();        
     }
   });

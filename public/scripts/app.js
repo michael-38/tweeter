@@ -8,6 +8,7 @@ $(document).ready(function() {
       method: 'GET',
       success: renderTweets
     });
+
   };
   
   loadTweets(); //load existing tweets from db
@@ -40,6 +41,7 @@ $(document).ready(function() {
         success: loadTweets
       })
       $("textarea").val("");
+      $(".counter").text("Character(s) remaining: 140")
     }
   });
   
