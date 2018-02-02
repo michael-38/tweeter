@@ -1,0 +1,80 @@
+article.tweet {
+  border: 1.5px solid lightgrey;
+  border-radius: 5px;
+  margin: 20px 2em 20px 2em;
+  overflow:hidden;
+}
+
+
+article.tweet header {
+  background-color: #f9f9f9;
+}
+
+
+article.tweet #fullname {
+  vertical-align: top;
+  line-height: 2;
+  font-size: 24px;
+  font-weight: bold;
+  color: grey;
+}
+
+
+article.tweet #handle {
+  line-height: 4;
+  font-size: 14px;
+  color: grey;
+  padding-right: 5px;
+  float: right;
+}
+
+
+article.tweet .profile_pic {
+  width: 60px;
+  height: 60px;
+  margin: 10px 8px 10px 8px;
+  border-radius: 5px;
+}
+
+article.tweet #tweet_text {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+
+article.tweet footer {
+  border-top: 1px solid #eee;
+  padding: 10px;
+  font-size: 13px;
+  color: grey;
+}
+
+
+article.tweet #like {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+article.tweet #retweet {
+
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+article.tweet #flag {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+
+article.tweet #icons {
+  display: none;
+  float: right;
+}
+
+
+
+
+

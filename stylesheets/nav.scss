@@ -1,0 +1,64 @@
+#nav-bar {
+  position: fixed;
+  top: 0;
+  height: 85px;
+  width: 100%;
+  border-bottom: 0.5px solid lightgrey;
+  z-index: 1;
+  background-color: #f9f9f9;
+  padding-left: 2em;
+  padding-right: 2em;
+  
+  
+}
+
+#nav-bar .logo {
+  float: left;
+  width: 100px;
+  height: 80px;
+}
+
+
+#nav-bar .header {
+  float: left;
+  text-align: center;
+  color: #1d9eef;
+  font-size: 200%;
+  font-weight: bold; 
+  line-height: 80px;
+  margin-left: 10px;
+  
+}
+
+
+.compose {
+  border: 1.5px solid lightgrey;
+  border-radius:6px;
+  color: lightgray;
+  background-color: white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 30px;
+  margin-top: 8px;
+  margin-right: 20px;
+  float: right;
+}
+
+
+.compose:focus {
+  outline: none;
+}
+
+
+.compose:hover {
+  background-color: lightgrey;
+  color:white;
+}
+
+
+
+
+
+
+
