@@ -8,7 +8,7 @@ $(document).ready(function() {
       method: 'GET',
       success: renderTweets
     });
-
+    
   };
   
   loadTweets(); //load existing tweets from db
@@ -65,6 +65,28 @@ function createTweetElement(obj) {
   let tweet_text = obj["content"].text;
   let created_at = obj["created_at"];
   
+  let elapsedTime = Date.now() - created_at;
+  let elapsedTimeInSeconds = Math.floor(elapsedTime / 1000) + 1;
+  let elapsedTimeInMinutes = Math.floor(elapsedTimeInSeconds / 60);
+  let elapsedTimeInHours = Math.floor(elapsedTimeInMinutes / 60);
+  let elapsedTimeInDays = Math.floor(elapsedTimeInHours / 24);
+  let elapsedTimeInWeeks = Math.floor(elapsedTimeInDays / 7);
+  let displayMessage = "";
+  
+  if (elapsedTimeInSeconds <= 59) {
+    displayMessage = `Posted ${elapsedTimeInSeconds}s ago`
+  } if (elapsedTimeInSeconds > 59) {
+    displayMessage = `Posted ${elapsedTimeInMinutes}m ago`
+  } if (elapsedTimeInMinutes > 59) {
+    displayMessage = `Posted ${elapsedTimeInHours}h ago`
+  } if (elapsedTimeInHours > 23) {
+    displayMessage = `Posted ${elapsedTimeInDays}d ago`
+  } if (elapsedTimeInDays > 6) {
+    displayMessage = `Posted ${elapsedTimeInWeeks}w ago`
+  }
+  
+  
+  
   $tweet = (`
   <article class="tweet">
   <header>
@@ -74,7 +96,7 @@ function createTweetElement(obj) {
   </header>
   <p id="tweet_text">${escape(tweet_text)}</p>
   <footer>
-  <span id="created_at">${escape(created_at)}</span>
+  <span id="created_at">${escape(displayMessage)}</span>
   <div id="icons">
   <img id="flag" src="/images/flag.png">
   <img id="retweet" src="/images/retweet.png">
