@@ -38,6 +38,7 @@ article.tweet .profile_pic {
 
 article.tweet #tweet_text {
   padding: 10px;
+  word-wrap: break-word;
 }
 
 

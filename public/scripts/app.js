@@ -40,6 +40,9 @@ $(document).ready(function() {
         success: loadTweets
       })
       $("textarea").val("");
+      var charCount = $("textarea").val().length;
+      var charLeft = 140 - charCount;
+      $("textarea").siblings(".counter").text("Character(s) remaining: " + charLeft);
     }
   });
   
