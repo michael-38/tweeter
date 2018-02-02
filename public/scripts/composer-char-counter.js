@@ -11,4 +11,10 @@ $(document).ready(function() {
           $(".new-tweet .counter").removeClass("overlimit");
         }
     });
-  });
+
+    $("form").on('submit', function() {
+      var charCount = $(".new-tweet textarea").val().length;
+      var charLeft = 140 - charCount;
+      $(".counter").text("Character(s) remaining: " + charLeft);
+    });
+ });
