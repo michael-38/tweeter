@@ -98,9 +98,9 @@ function createTweetElement(obj) {
   <footer>
   <span id="created_at">${escape(displayMessage)}</span>
   <div id="icons">
-  <img id="flag" src="/images/flag.png">
-  <img id="retweet" src="/images/retweet.png">
-  <img id="like" src="/images/like.png">
+  <i class="far fa-heart" id="like"></i>
+  <i class="fas fa-retweet" id="retweet"></i>
+  <i class="far fa-flag" id="flag"></i>
   </div>
   </footer>
   </article>`
